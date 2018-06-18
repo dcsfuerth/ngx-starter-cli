@@ -12,6 +12,7 @@ import { ComponentsModule } from './components/components.module';
 import { metaReducers, reducers, State } from './reducers';
 import { HomeEffects } from './reducers/home/home.effects';
 import { environment } from '../environments/environment';
+import { ServiceWorkerModule } from '@angular/service-worker';
 
 export const REDUCER_TOKEN = new InjectionToken<ActionReducerMap<State>>('Registered Reducers');
 
@@ -32,6 +33,7 @@ export function getReducers() {
       stateKey: 'router',
     }),
     EffectsModule.forRoot([AppEffects, HomeEffects]),
+    ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production }),
   ],
   providers: [
     { provide: APP_ENVIRONMENT, useValue: environment },
