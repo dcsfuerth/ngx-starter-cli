@@ -75,3 +75,8 @@ import 'zone.js/dist/zone';
 /***************************************************************************************************
  * APPLICATION IMPORTS
  */
+
+/**
+ * For each action type in an action group, make a simple
+ * enum object for all of this group's action types.
+ */
