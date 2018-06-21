@@ -5,7 +5,7 @@
 
   "html.format.endWithNewline": true,
   "html.format.wrapAttributes": "auto",
-  "html.format.wrapLineLength": 100,
+  "html.format.wrapLineLength": 80,
   "html.suggest.angular1": false,
 
   "jest.autoEnable": false,
