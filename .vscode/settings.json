@@ -25,5 +25,6 @@
     "relativeDownLevel",
     "relativeUpLevel"
   ],
-  "typescript.locale": "en"
+  "typescript.locale": "en",
+  "typescript.tsdk": "node_modules/typescript/lib"
 }
