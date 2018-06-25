@@ -5,7 +5,7 @@ export class AppPage {
     return browser.get('/');
   }
 
-  getParagraphText() {
-    return element(by.css('dcs-root h1')).getText();
+  getFooterText() {
+    return element(by.css('dcs-root footer div')).getText();
   }
 }

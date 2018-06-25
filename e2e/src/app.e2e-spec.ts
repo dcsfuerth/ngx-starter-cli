@@ -1,3 +1,4 @@
+import { browser } from 'protractor';
 import { AppPage } from './app.po';
 
 describe('workspace-project App', () => {
@@ -7,8 +8,8 @@ describe('workspace-project App', () => {
     page = new AppPage();
   });
 
-  it('should display welcome message', () => {
+  it('should display the footer', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Welcome to ngx-starter-cli!');
+    expect(page.getFooterText()).toContain('2018');
   });
 });
