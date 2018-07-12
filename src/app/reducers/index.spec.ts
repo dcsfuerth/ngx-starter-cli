@@ -5,7 +5,7 @@ describe('root reducer map', () => {
     expect(reducers).toBeInstanceOf(Object);
 
     Object.values(reducers).forEach(reducer => {
-      expect(typeof reducer).toBe('function');
+      expect(reducer).toEqual(expect.any(Function));
     });
   });
 });
@@ -16,7 +16,7 @@ describe('meta reduces', () => {
     expect(metaReducers).toBeInstanceOf(Array);
 
     Object.values(metaReducers).forEach(reducer => {
-      expect(typeof reducer).toBe('function');
+      expect(reducer).toEqual(expect.any(Function));
     });
   });
 });
