@@ -9,7 +9,7 @@ if (environment.production) {
 
 const bootstrap = () => platformBrowserDynamic().bootstrapModule(AppModule);
 
-if (environment.hmr && module['hot']) {
+if (environment.hmr && (module as any)['hot']) {
   import('./hmr').then(m => {
     m.hmrBootstrap(module, bootstrap);
   });

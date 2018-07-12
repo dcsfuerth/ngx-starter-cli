@@ -1,4 +1,3 @@
-import { ApiGetRequest, ApiRequest } from '@dcs/ngx-tools';
 import { Store } from '@ngrx/store';
 import { StoreComponent } from '../components/base/store-component.class';
 import { State } from '../reducers';

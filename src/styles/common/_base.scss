@@ -23,11 +23,13 @@ a {
   }
 }
 
-button,
 input[type='submit'],
 .btn {
-  @include btn;
+  &.btn-default {
+    @include btn;
+  }
   &.btn-white {
+    @include btn;
     @include box-shadow;
     background-color: white;
     color: $blue;
