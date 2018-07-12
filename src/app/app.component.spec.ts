@@ -4,6 +4,15 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 
 describe('AppComponent', () => {
+  beforeAll(() => {
+    // remove console.log from test output
+    jest.spyOn(global.console, 'log').mockImplementation(() => {});
+  });
+
+  afterAll(() => {
+    jest.restoreAllMocks();
+  });
+
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [RouterTestingModule],

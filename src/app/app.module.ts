@@ -1,47 +1,14 @@
-import { InjectionToken, NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { APP_ENVIRONMENT, NgxToolsModule } from '@dcs/ngx-tools';
+import { NgModule } from '@angular/core';
 import { EffectsModule } from '@ngrx/effects';
-import { StoreRouterConnectingModule } from '@ngrx/router-store';
-import { ActionReducerMap, StoreModule } from '@ngrx/store';
-import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AppEffects } from './app.effects';
 import { ComponentsModule } from './components/components.module';
-import { metaReducers, reducers, State } from './reducers';
-import { HomeEffects } from './reducers/home/home.effects';
-import { environment } from '../environments/environment';
-import { ServiceWorkerModule } from '@angular/service-worker';
-
-export const REDUCER_TOKEN = new InjectionToken<ActionReducerMap<State>>('Registered Reducers');
-
-export function getReducers() {
-  return reducers;
-}
+import { CoreModule } from './core/core.module';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    NgxToolsModule,
-    ComponentsModule,
-    StoreModule.forRoot(REDUCER_TOKEN, { metaReducers }),
-    !environment.production ? StoreDevtoolsModule.instrument() : [],
-    StoreRouterConnectingModule.forRoot({
-      stateKey: 'router',
-    }),
-    EffectsModule.forRoot([AppEffects, HomeEffects]),
-    ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production }),
-  ],
-  providers: [
-    { provide: APP_ENVIRONMENT, useValue: environment },
-    {
-      provide: REDUCER_TOKEN,
-      useFactory: getReducers,
-    },
-  ],
+  imports: [AppRoutingModule, ComponentsModule, CoreModule, EffectsModule.forRoot([AppEffects])],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

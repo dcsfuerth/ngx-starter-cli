@@ -22,7 +22,7 @@ export function localStorageSyncReducer(reducer: ActionReducer<any>): ActionRedu
   return localStorageSync({ keys: [], rehydrate: true })(reducer);
 }
 
-export const reducers: ActionReducerMap<State> = {
+export const reducers: ActionReducerMap<State, any> = {
   router: routerReducer,
   home: fromHome.reducer,
   apiError,
