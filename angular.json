@@ -118,5 +118,10 @@
       }
     }
   },
-  "defaultProject": "ngx-starter-cli"
+  "defaultProject": "ngx-starter-cli",
+  "cli": {
+    "warnings": {
+      "typescriptMismatch": false
+    }
+  }
 }
