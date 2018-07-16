@@ -3,14 +3,14 @@
   "compilerOptions": {
     "outDir": "../out-tsc/app",
     "module": "esnext",
-    "types": ["node"]
+    "types": ["node", "jest"]
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
     "preserveWhitespaces": false,
     "strictInjectionParameters": true,
     "enableIvy": false,
-    "disableTypeScriptVersionCheck": true
+    "disableTypeScriptVersionCheck": false
   },
-  "exclude": ["src/test.ts", "**/*.spec.ts"]
+  "exclude": ["src/testing.ts", "**/*.spec.ts"]
 }
