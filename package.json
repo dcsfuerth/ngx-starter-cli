@@ -39,7 +39,7 @@
     "@angular/pwa": "^0.6.8",
     "@angular/router": "^6.0.9",
     "@angular/service-worker": "^6.0.9",
-    "@dcs/ngx-tools": "^3.6.0",
+    "@dcs/ngx-tools": "^3.6.1",
     "@ng-bootstrap/ng-bootstrap": "^2.2.0",
     "@ngrx/effects": "^6.0.1",
     "@ngrx/router-store": "^6.0.1",
