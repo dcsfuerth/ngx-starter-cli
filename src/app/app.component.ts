@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, VERSION } from '@angular/core';
 
 @Component({
   selector: 'dcs-root',
@@ -7,6 +7,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
   public ngOnInit() {
-    console.log('Site load:', performance.now().toFixed(2), 'ms!!');
+    console.log(`Loaded Angular ${VERSION.full} in ${performance.now().toFixed(2)} ms!!`);
   }
 }
