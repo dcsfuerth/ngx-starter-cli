@@ -5,12 +5,7 @@ import { BootstrapDemoPageComponent } from './bootstrap-demo-page/bootstrap-demo
 import { BootstrapDemoRoutingModule } from './bootstrap-demo-routing.module';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    BootstrapDemoRoutingModule,
-    NgbDatepickerModule.forRoot(),
-    NgbTabsetModule.forRoot(),
-  ],
+  imports: [CommonModule, BootstrapDemoRoutingModule, NgbDatepickerModule, NgbTabsetModule],
   declarations: [BootstrapDemoPageComponent],
 })
 export class BootstrapDemoModule {}
