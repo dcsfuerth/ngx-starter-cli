@@ -15,7 +15,8 @@
     "skipLibCheck": true,
     "target": "es5",
     "typeRoots": ["node_modules/@types"],
-    "types": ["jest", "node", "ramda"],
-    "lib": ["es2017", "dom"]
+    "types": ["jest", "node"],
+    "lib": ["es2017", "dom"],
+    "plugins": [{ "name": "tslint-language-service" }]
   }
 }
