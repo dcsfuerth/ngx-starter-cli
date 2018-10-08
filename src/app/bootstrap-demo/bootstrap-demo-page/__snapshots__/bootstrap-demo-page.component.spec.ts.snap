@@ -10,12 +10,12 @@ exports[`BootstrapDemoPageComponent renders the the tabs 1`] = `
     class="nav-item"
   >
     <a
-      aria-controls="ngb-tab-3-panel"
+      aria-controls="ngb-tab-4-panel"
       aria-disabled="false"
       aria-expanded="true"
       class="nav-link active"
       href=""
-      id="ngb-tab-3"
+      id="ngb-tab-4"
       role="tab"
     >
        Datepicker
@@ -30,7 +30,7 @@ exports[`BootstrapDemoPageComponent renders the the tabs 1`] = `
       aria-expanded="false"
       class="nav-link"
       href=""
-      id="ngb-tab-4"
+      id="ngb-tab-5"
       role="tab"
     >
        
@@ -45,11 +45,27 @@ exports[`BootstrapDemoPageComponent renders the the tabs 1`] = `
     class="nav-item"
   >
     <a
+      aria-disabled="false"
+      aria-expanded="false"
+      class="nav-link"
+      href=""
+      id="ngb-tab-6"
+      role="tab"
+    >
+       
+      
+      Loading data
+    </a>
+  </li>
+  <li
+    class="nav-item"
+  >
+    <a
       aria-disabled="true"
       aria-expanded="false"
       class="nav-link disabled"
       href=""
-      id="ngb-tab-5"
+      id="ngb-tab-7"
       role="tab"
       tabindex="-1"
     >
@@ -60,4 +76,8 @@ exports[`BootstrapDemoPageComponent renders the the tabs 1`] = `
 </ul>
 `;
 
-exports[`BootstrapDemoPageComponent should create 1`] = `BootstrapDemoPageComponent {}`;
+exports[`BootstrapDemoPageComponent should create 1`] = `
+BootstrapDemoPageComponent {
+  "loading": false,
+}
+`;

@@ -1,39 +1,40 @@
-<header>
-  <nav class="container">
-    <div class="row">
-      <div class="col-12">
-        <div class="flex-wrapper">
-          <ul>
-            <li>
-              <a routerLink="/home" title="Home">
-                <img src="../../../assets/images/dcs-logo.svg" />
-              </a>
-          </ul>
-          <ul *ngIf="isLoggedIn">
-            <li>
-              <a routerLink="/home" routerLinkActive="active">Home</a>
-            </li>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" routerLink="/home" title="Home">
+    <img src="../../../assets/images/dcs-logo.svg" alt="DCS Logo" height="30" />
+  </a>
 
-            <li>
-              <a routerLink="/bootstrap" routerLinkActive="active">Demo of Bootstrap Components</a>
-            </li>
+  <!-- Left logged in -->
+  <ul class="navbar-nav mr-auto" *ngIf="isLoggedIn">
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/home" routerLinkActive="active">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/bootstrap" routerLinkActive="active">
+        Demo of Components
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/not-existing-page" routerLinkActive="active">
+        I do not exist
+      </a>
+    </li>
+  </ul>
 
-            <li>
-              <a routerLink="/not-existing-page" routerLinkActive="active">I do not exist</a>
-            </li>
+  <!-- Right logged in -->
+  <ul class="navbar-nav mr-lg-2" *ngIf="isLoggedIn">
+    <li class="nav-item">
+      <button type="button" class="btn btn-light" (click)="logout()">Logout</button>
+    </li>
+  </ul>
 
-            <li>
-              <span (click)="logout()">logout</span>
-            </li>
-          </ul>
+  <!-- Left logged out -->
+  <ul class="navbar-nav mr-auto" *ngIf="!isLoggedIn"></ul>
 
-          <ul *ngIf="!isLoggedIn">
-            <li>
-              <a (click)="login()">Login</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </nav>
-</header>
+  <!-- Right logged out -->
+  <ul class="navbar-nav mr-lg-2" *ngIf="!isLoggedIn">
+    <li class="nav-item">
+      <button type="button" class="btn btn-light" (click)="login()">Login</button>
+    </li>
+  </ul>
+
+</nav>

@@ -1,6 +1,4 @@
 // @import '../../../styles/common/mixins';
-@import '../../../styles/common/variables';
-
 .loading-indicator {
   position: fixed;
   top: 0;
@@ -34,7 +32,7 @@
       border-radius: 50%;
       border-style: solid;
       border-width: 5px;
-      border-color: white transparent $blue-light transparent;
+      border-color: white transparent #009ee0 transparent;
       animation: dcs-ring 1.2s linear infinite;
     }
   }

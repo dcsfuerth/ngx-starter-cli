@@ -5,4 +5,15 @@ import { Component } from '@angular/core';
   templateUrl: './bootstrap-demo-page.component.html',
   styleUrls: ['./bootstrap-demo-page.component.scss'],
 })
-export class BootstrapDemoPageComponent {}
+export class BootstrapDemoPageComponent {
+  public loading = false;
+
+  public loadData(): void {
+    this.loading = true;
+    console.warn('loading', this.loading);
+
+    setTimeout(() => {
+      this.loading = false;
+    }, 2000);
+  }
+}
